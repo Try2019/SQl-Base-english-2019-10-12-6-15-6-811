@@ -1,0 +1,24 @@
+创建数据库：
+create database studentex;
+
+创建student数据表：
+create table student(`id` varchar(20),`name` varchar(20),`age` int,`sex` varchar(10));
+insert into student(id,name,age,sex) values('001','zhangsan',18,'male');
+insert into student(id,name,age,sex) values('002','lisi',20,'female');
+
+创建subject数据表：
+create table subject(`id` varchar(20),`subject` varchar(20),`teacher` varchar(20),`description` varchar(40));
+insert into subject(id,subject,teacher,description) values('0001','Chinese','Mr.Wang','the exam is easy');
+insert into subject(id,subject,teacher,description) values('0002','Math','Miss Liu','the exam is difficult');
+
+创建score数据表：
+create table score(`id` varchar(20),`student_id` varchar(20),`subject_id` varchar(20),`score` float);
+insert into score(id,student_id,subject_id,score) values('1','001','1001',80);
+insert into score(id,student_id,subject_id,score) values('2','002','1002',60);
+insert into score(id,student_id,subject_id,score) values('3','001','1001',70);
+insert into score(id,student_id,subject_id,score) values('4','002','1002',60.5);
+
+查询数据表：
+select * from student;
+select * from subject;
+select * from score;
